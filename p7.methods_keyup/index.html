@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Project 1</title>
+</head>
+<body>
+    <div id="app">
+        <h3>
+            Find Square
+        </h3>
+        <input type="text" v-model="num" v-on:keyup="findSquare">
+        <h4>Square of {{num}} is {{square}}</h4>
+    </div>
+    <script src="vue.js"></script>
+    <script>
+    var vm = new Vue({
+        el: "#app",
+        data: {
+            num: 0,
+            square: 0
+        },
+        methods: {
+            findSquare: function() {
+                this.square = this.num * this.num
+            }
+        }
+    })
+    </script>
+
+</body>
+</html>
